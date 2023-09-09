@@ -25,3 +25,34 @@ CREATE TABLE [dbo].[Productos] (
     [Stock]  INT             NOT NULL,
     CONSTRAINT [PK_Productos] PRIMARY KEY CLUSTERED ([ID] ASC)
 );
+
+-- Paso 3: 
+-- Creear una tabla llamada "Clientes" con las siguientes columnas:
+-- ID (Clave primaria)
+-- Nombre
+-- Email
+-- Teléfono
+CREATE TABLE [dbo].[Clientes] (
+    [ID]		INT             IDENTITY (1, 1) NOT NULL,
+    [Nombre]	NVARCHAR (50)   NOT NULL,
+    [Email ]	NVARCHAR (200)  NOT NULL,
+    [Telefono]  nvarchar(15)    NOT NULL,
+    CONSTRAINT [PK_Clientes] PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+
+-- Consultas generales
+select * from Clientes
+select * from Productos
+
+--  Agregar registros
+insert into Clientes ([Nombre], [Email ], [Telefono]) values('John Quesada'		, 'jquesada@gmail.com' , '88888888');
+insert into Clientes ([Nombre], [Email ], [Telefono]) values('Andrey Quesada'	, 'jquesada1@gmail.com', '88888888');
+insert into Clientes ([Nombre], [Email ], [Telefono]) values('Saul Quesada'		, 'jquesada2@gmail.com', '88888888');
+insert into Clientes ([Nombre], [Email ], [Telefono]) values('Jennifer Quesada'	, 'jquesada3@gmail.com', '88888888');
+insert into Clientes ([Nombre], [Email ], [Telefono]) values('Pedro Quesada'	, 'jquesada4@gmail.com', '88888888');
+
+insert into Productos ([Nombre], [Precio], [Stock]) values('Peras',		100.00, 5)
+insert into Productos ([Nombre], [Precio], [Stock]) values('Manzanas',	100.00, 5)
+insert into Productos ([Nombre], [Precio], [Stock]) values('Bananos',	100.00, 5)
+insert into Productos ([Nombre], [Precio], [Stock]) values('Tomates',	100.00, 5)
+insert into Productos ([Nombre], [Precio], [Stock]) values('Repollo',	100.00, 5)
