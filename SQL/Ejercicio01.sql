@@ -43,6 +43,12 @@ CREATE TABLE [dbo].[Clientes] (
 -- Consultas generales
 select * from Clientes
 select * from Productos
+-- Consulta que retorne unicamente nombre y precio
+select Nombre, Precio from Productos
+-- 
+select * from Productos where ID = 5;
+select * from Clientes  where ID = 2;
+select * from Clientes  where [Email ] = 'jquesada1@gmail.com'
 
 --  Agregar registros
 insert into Clientes ([Nombre], [Email ], [Telefono]) values('John Quesada'		, 'jquesada@gmail.com' , '88888888');
@@ -51,8 +57,8 @@ insert into Clientes ([Nombre], [Email ], [Telefono]) values('Saul Quesada'		, '
 insert into Clientes ([Nombre], [Email ], [Telefono]) values('Jennifer Quesada'	, 'jquesada3@gmail.com', '88888888');
 insert into Clientes ([Nombre], [Email ], [Telefono]) values('Pedro Quesada'	, 'jquesada4@gmail.com', '88888888');
 
-insert into Productos ([Nombre], [Precio], [Stock]) values('Peras',		100.00, 5)
-insert into Productos ([Nombre], [Precio], [Stock]) values('Manzanas',	100.00, 5)
-insert into Productos ([Nombre], [Precio], [Stock]) values('Bananos',	100.00, 5)
-insert into Productos ([Nombre], [Precio], [Stock]) values('Tomates',	100.00, 5)
-insert into Productos ([Nombre], [Precio], [Stock]) values('Repollo',	100.00, 5)
+insert into Productos ([Nombre], [Precio], [Stock]) values('Peras',		100.00, 5);
+insert into Productos ([Nombre], [Precio], [Stock]) values('Manzanas',	100.00, 5);
+insert into Productos ([Nombre], [Precio], [Stock]) values('Bananos',	100.00, 5);
+insert into Productos ([Nombre], [Precio], [Stock]) values('Tomates',	100.00, 5);
+insert into Productos ([Nombre], [Precio], [Stock]) values('Repollo',	100.00, 5);
