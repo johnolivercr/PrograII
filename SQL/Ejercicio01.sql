@@ -62,3 +62,23 @@ insert into Productos ([Nombre], [Precio], [Stock]) values('Manzanas',	100.00, 5
 insert into Productos ([Nombre], [Precio], [Stock]) values('Bananos',	100.00, 5);
 insert into Productos ([Nombre], [Precio], [Stock]) values('Tomates',	100.00, 5);
 insert into Productos ([Nombre], [Precio], [Stock]) values('Repollo',	100.00, 5);
+
+-- Actualizacion de registros
+
+update Productos
+	set [Precio] = 5
+where ID = 1;
+
+
+update a -- instruccion
+set a.[Precio] = 5 -- campo o modificar
+from Productos as a -- tabla y alias
+where a.ID = 3 -- condicion
+
+--  Elimina un registro bajo una condicion
+delete a
+from Productos as a -- tabla y alias
+where a.ID = 3 -- condicion 
+
+-- Elimina todos los registros de la tabla.
+truncate table Productos
