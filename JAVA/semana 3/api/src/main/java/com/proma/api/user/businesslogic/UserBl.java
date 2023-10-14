@@ -1,9 +1,6 @@
 package com.proma.api.user.businesslogic;
 
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.proma.api.user.da.UserRepository;
 import com.proma.api.user.dto.UserDto;
 
@@ -34,12 +31,16 @@ public class UserBl {
         return userRep.findById(user_id).orElse(null);
     }
 
-    public void add(UserDto user) {
-        /** Validar que el usuario no exista */
-
-        /** Cedula, Email */
-
-        userRep.save(user);
+    public UserDto login(String user, String pasword) {
+        return userRep.findByEmailAndPassword(user, pasword).orElse(null);
     }
 
+    /**
+     * 
+     * @param user
+     * @return
+     */
+    public UserDto add(UserDto user) {
+        return userRep.save(user);
+    }
 }

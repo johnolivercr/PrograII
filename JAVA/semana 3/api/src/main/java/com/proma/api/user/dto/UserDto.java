@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "auth_user") // El nombre de la tabla exacto.
+@Table(name = "tb_user") // El nombre de la tabla exacto.
 public class UserDto {
 
     /** Propiedas = columnas de la tabla */
@@ -26,18 +26,33 @@ public class UserDto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private int user_id;
+
     private String last_name;
     private String name;
     private String email;
     private Date birthdate;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public int getUserId() {
         return user_id;
     }
-   
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
     public String getLastName() {
         return last_name;
     }
+
     public void setLastName(String last_name) {
         this.last_name = last_name;
     }
@@ -45,6 +60,7 @@ public class UserDto {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -52,6 +68,7 @@ public class UserDto {
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -59,6 +76,7 @@ public class UserDto {
     public Date getBirthdate() {
         return birthdate;
     }
+
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
