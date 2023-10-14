@@ -43,4 +43,10 @@ public class UserBl {
     public UserDto add(UserDto user) {
         return userRep.save(user);
     }
+
+    public void delete(Long user_id){
+        userRep.deleteById(user_id);
+    }
+
+
 }
